@@ -5,7 +5,7 @@ This repository contains the solutions for Part 1 of the Full Stack Open course 
 Description: The courseinfo app is designed to display information about various courses, including their names, parts, and the total number of exercises. It provides a simple and clear overview of the course content.
 How to Run:
 
-Clone the repository: _git clone https://github.com/imlakshaychauhan/part-1.git_
+Clone the repository: _git clone [https://github.com/imlakshaychauhan/part-1.git_](https://github.com/imlakshaychauhan/Full-Stack-Open/blob/main/part-1/README.md)
 
 Navigate to the courseinfo directory: _cd part1/courseinfo_
 
@@ -19,7 +19,7 @@ Description: The unicafe app allows users to provide feedback on different aspec
 
 How to Run:
 
-Clone the repository: _git clone https://github.com/imlakshaychauhan/part-1.git_
+Clone the repository: _git clone [https://github.com/imlakshaychauhan/part-1.git_](https://github.com/imlakshaychauhan/Full-Stack-Open/blob/main/part-1/README.md)
 
 Navigate to the unicafe directory: _cd part1/unicafe_
 
@@ -33,7 +33,7 @@ Description: The anecdotes app showcases a collection of programming-related ane
 
 How to Run:
 
-Clone the repository: _git clone https://github.com/imlakshaychauhan/part-1.git_
+Clone the repository: _git clone [https://github.com/imlakshaychauhan/part-1.git_](https://github.com/imlakshaychauhan/Full-Stack-Open/blob/main/part-1/README.md)
 
 Navigate to the anecdotes directory: _cd part1/anecdotes_
 
