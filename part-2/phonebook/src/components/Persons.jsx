@@ -16,7 +16,7 @@ const Persons = ({ setPersons, filteredPersons }) => {
         return (
           <p key={index}>
             {person.name} {person.number}
-           <button onClick={() => handleDelete(person)}>Delete</button>
+           <button onClick={() => handleDelete(person)}>delete</button>
           </p>
         );
       })}
