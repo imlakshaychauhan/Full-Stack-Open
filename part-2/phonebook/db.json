@@ -1,29 +1,19 @@
 {
   "persons": [
     {
-      "id": "097b",
-      "name": "hihi",
-      "number": "12345"
-    },
-    {
       "id": "d0c7",
       "name": "lakshay",
       "number": "6741294"
     },
     {
-      "id": "441a",
-      "name": "ajflk",
-      "number": "741928"
+      "id": "d0c7",
+      "name": "tennis",
+      "number": "6741294"
     },
     {
-      "id": "bd36",
-      "name": "ajf",
-      "number": "12"
-    },
-    {
-      "id": "e968",
-      "name": "koko",
-      "number": "137892"
+      "id": "d0c7",
+      "name": "hennis",
+      "number": "6741294"
     }
   ]
 }
