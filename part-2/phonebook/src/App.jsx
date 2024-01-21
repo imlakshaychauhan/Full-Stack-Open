@@ -1,19 +1,29 @@
-import { useState } from "react";
-import PersonForm from "./components/PersonForm"
-import Filter from "./components/Filter"
-import Persons from "./components/Persons"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import PersonForm from "./components/PersonForm";
+import Filter from "./components/Filter";
+import Persons from "./components/Persons";
+import { getAllContacts } from "./services/ContactService";
+import AddNotification from "../src/components/AddNotification";
+import ErrorNotification from "../src/components/ErrorNotification"
 
 const App = () => {
-  const [persons, setPersons] = useState([
-    { name: "Arto Hellas", number: "040-123456", id: 1 },
-    { name: "Ada Lovelace", number: "39-44-5323523", id: 2 },
-    { name: "Dan Abramov", number: "12-43-234345", id: 3 },
-    { name: "Mary Poppendieck", number: "39-23-6423122", id: 4 },
-  ]);
+  const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newPhone, setNewPhone] = useState("");
   const [filter, setFilter] = useState("");
-  const filteredPersons = persons.filter((person) => person.name.toLowerCase().includes(filter.toLowerCase()));
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const filteredPersons = persons.filter((person) =>
+    person.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
+  useEffect(() => {
+    getAllContacts()
+      .then((res) => setPersons(res.data))
+      .catch((err) => alert(err));
+  }, []);
 
   const personFormProps = {
     newName,
@@ -22,17 +32,23 @@ const App = () => {
     setNewName,
     filteredPersons,
     persons,
-    setPersons
+    setPersons,
+    setMessage,
+    setError
   };
 
   return (
     <div>
       <h2>Phonebook</h2>
+
+      <AddNotification addMessage={message} />
+      <ErrorNotification addError={error} />
+
       <Filter filter={filter} setFilter={setFilter} />
       <h2>add a new</h2>
       <PersonForm {...personFormProps} />
       <h2>Numbers</h2>
-      <Persons filteredPersons={filteredPersons} />
+      <Persons setPersons={setPersons} filteredPersons={filteredPersons} />
     </div>
   );
 };

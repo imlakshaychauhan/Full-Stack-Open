@@ -1,0 +1,12 @@
+
+const AddNotification = ({ addMessage }) => {
+  return (
+    addMessage && (
+      <div className="add">
+        <p>{addMessage}</p>
+      </div>
+    )
+  );
+};
+
+export default AddNotification;
