@@ -4,7 +4,7 @@ import Filter from "./components/Filter";
 import Persons from "./components/Persons";
 import { getAllContacts } from "./services/ContactService";
 import AddNotification from "../src/components/AddNotification";
-import ErrorNotification from "../src/components/ErrorNotification"
+import ErrorNotification from "../src/components/ErrorNotification";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -33,7 +33,7 @@ const App = () => {
     persons,
     setPersons,
     setMessage,
-    setError
+    setError,
   };
 
   return (
